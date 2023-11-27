@@ -309,10 +309,6 @@ switch (ENVIRONMENT)
 // Load custom utils
 require_once BASEPATH."utils.php";
 
-// Load libraries
-require_once BASEPATH."vendor/autoload.php";
-
-
 /*
  * --------------------------------------------------------------------
  * LOAD THE BOOTSTRAP FILE

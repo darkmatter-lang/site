@@ -50,3 +50,6 @@ RUN echo "Initializing cron jobs ..." \
 	&& echo "0	*	*	*	*	/usr/bin/php /mnt/public/index.php cron every_hour" >> /etc/crontabs/root \
 	&& echo "0	0	*	*	*	/usr/bin/php /mnt/public/index.php cron every_day" >> /etc/crontabs/root \
 	&& crontab -l
+
+EXPOSE 80/tcp
+EXPOSE 443/tcp

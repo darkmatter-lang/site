@@ -31,12 +31,12 @@ docker network create darkmatter
 
 ### 3. Create MariaDB database
 ```bash
-# Create a Database server for development
+# Create a Database server
 docker run -d \
+	-h darkmatter-mariadb \
 	--name darkmatter-mariadb \
 	--net darkmatter \
 	-h darkmatter-mariadb \
-	-p 3306:3306/tcp \
 	-e MARIADB_ROOT_PASSWORD="secure_password_goes_here" \
 	mariadb:latest
 
@@ -92,17 +92,11 @@ Similar steps to the development setup. Instead;
 - Copy `nginx/production.conf.example` to `nginx/default.conf` and configure it.
 
 ```bash
-# Create a Database server for production
+# You might also wanna run `docker update darkmatter-mariadb --restart always`.
+# Deploy container, change ports if needed.
 docker run -d \
-	--net darkmatter \
-	--name darkmatter-mariadb \
-	-p 3306:3306/tcp \
-	-v "/my/own/datadir:/var/lib/mysql" \
-	-e MARIADB_ROOT_PASSWORD="secure_password_goes_here" \
-	mariadb:latest
-
-# Deploy image
-docker run -d \
+	-h darkmatter-site \
+	--restart always \
 	--net darkmatter \
 	--name darkmatter-site \
 	-p 80:80/tcp \
