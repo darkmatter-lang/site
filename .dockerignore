@@ -1,0 +1,8 @@
+bin/
+src/
+websocket/
+!websocket/requirements.txt
+*.json
+*.sh
+*.md
+LICENSE

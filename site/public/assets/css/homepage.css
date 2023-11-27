@@ -1,0 +1,194 @@
+
+@keyframes cursor-blink {
+	0% {
+		background-color: rgba(255, 255, 255, 0.0);
+	}
+	100% {
+		background-color: rgba(255, 255, 255, 1.0);
+	}
+}
+
+@keyframes glow {
+	0% {
+		text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+		text-shadow: 0 0 3px #00AAAA, 0 0 8px #00AAAA;
+	}
+	100% {
+		text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+		text-shadow: 0 0 3px #88FFFF, 0 0 8px #88FFFF;
+	}
+}
+
+.is-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	max-height: 100vh;
+	z-index: -1;
+}
+
+.clip {
+	-webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 92%);
+	clip-path: polygon(0 0, 100% 0, 100% 100%, 0 92%);
+}
+
+.stars {
+	background: radial-gradient(at bottom left, #000 25%, var(--stars-bg, #091818) 55%, #000 90%);
+	z-index: -8;
+}
+
+#main-bg-particles {
+	position: relative;
+	z-index: -2;
+	max-height: 100vh;
+}
+
+#main-bg-particles canvas {
+	max-height: 100vh;
+}
+
+#rgb-raster {
+	position: absolute;
+	z-index: -4;
+	top: 0;
+	left: 0;
+	max-height: 100vh;
+}
+
+#constellation {
+	position: absolute;
+	z-index: -3;
+	top: 0;
+	left: 0;
+	max-height: 100vh;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+img.logo {
+	width: 250px;
+	height: 250px;
+	border-radius: 12px;
+	border: 4px solid #00FFFF;
+	box-shadow: #00FFFF 0 0 12px 2px;
+	opacity: 0.9;
+}
+
+img.logo:hover {
+	box-shadow: #00FFFF 0 0 14px 4px;
+}
+
+img.logo::after {
+	position: absolute;
+	content: "";
+	display: inline-block;
+
+}
+
+.cursor {
+	content: "";
+	background-color: transparent;
+	animation: cursor-blink 0.5s alternate infinite;
+	/*border: 1px solid #FFF;*/
+	vertical-align: -3px;
+	display: inline-block;
+	min-width: 22px;
+	min-height: 46px;
+	margin-left: 5px;
+}
+
+.main-text {
+	z-index: 1;
+}
+
+
+.homepage-container {
+	padding: 80px;
+	padding-top: 120px;
+}
+
+.glow {
+	-webkit-animation: glow 1s ease-in-out infinite alternate;
+	-moz-animation: glow 1s ease-in-out infinite alternate;
+	animation: glow 1s ease-in-out infinite alternate;
+}
+
+.inverted-glow {
+	color: #000000;
+	color: var(--black);
+	text-shadow: 0 0 1px #FFFFFF;
+	-webkit-animation: glow 1s ease-in-out infinite alternate;
+	-moz-animation: glow 1s ease-in-out infinite alternate;
+	animation: glow 1s ease-in-out infinite alternate;
+}
+
+.homepage-column-content {
+	border-radius: 8px;
+	border: 2px solid #045454;
+	border: 2px solid var(--dark-cyan);
+	box-shadow: #00FFFF 0 0 4px 0;
+	box-shadow: var(--cyan) 0 0 4px 0;
+	background-color: rgba(0, 0, 0, 0.1);
+	padding: 40px;
+	transition: all 0.3s ease-in-out;
+}
+
+.homepage-column-content:hover {
+	border: 2px solid #00FFFF;
+	border: 2px solid var(--cyan);
+	background-color: rgba(0, 0, 0, 0.2);
+	transition: all 0.3s ease-in-out;
+}
+
+/*
+section#main {
+	backdrop-filter: blur(5px);
+}
+
+
+#about-us-body {
+	background-image:
+		linear-gradient(to bottom, rgba(0, 0, 0, 0.69), rgba(0, 0, 0, 0.69)),
+		url("/assets/img/deep-space.jpg");
+	background-attachment: fixed;
+	background-size: cover;
+	background-repeat: no-repeat;
+	z-index: 1
+}
+
+#about-us-body div.hero-body {
+	backdrop-filter: blur(5px);
+}
+*/
+
+.contributors {
+	display: inline-block;
+	margin: 0 auto;
+}
+
+.contributors img {
+	display: inline-block;
+	border-radius: 100%;
+	border: 4px solid #00FFFF;
+	border: 4px solid var(--cyan);
+	box-shadow: 0 0 4px 1px #00FFFF;
+	box-shadow: 0 0 4px 1px var(--cyan);
+}
+
+.footer {
+	background-color: #000000;
+	background-color: var(--black);
+}

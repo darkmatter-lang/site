@@ -1,0 +1,11 @@
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+$config['darkmatter']['test'] = empty(getenv('ENVIRONMENT_VARIABLE')) ? "default" : getenv('ENVIRONMENT_VARIABLE');
+
+$config['darkmatter']['meta_tags'] = [
+	"programming", "language", "darkmatter",
+	"code", "rust", "c", "java", "assembly",
+	"space", "compiler", "universe", "modern",
+	"efficient", "fast"
+];

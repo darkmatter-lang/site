@@ -1,0 +1,17 @@
+# Configurations
+nginx/*.conf
+!nginx/*.example
+site/application/logs/
+!site/application/logs/.gitkeep
+site/application/cache/*
+!site/application/cache/.htaccess
+site/application/config/config.php
+site/application/config/darkmatter.php
+site/application/config/database.php
+site/application/config/migration.php
+!site/application/config/*.example
+
+# Rubbish
+*.tmp
+.DS_Store
+Thumbs.db

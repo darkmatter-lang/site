@@ -1,0 +1,226 @@
+/* Bulma CSS GitHub style language colors */
+
+progress.lang-asm::-moz-progress-bar {
+	background: #6E4C13;
+}
+
+progress.lang-asm::-webkit-progress-value {
+	background: #6E4C13;
+}
+
+progress.lang-c::-moz-progress-bar {
+	background: #555555;
+}
+
+progress.lang-c::-webkit-progress-value {
+	background: #555555;
+}
+
+progress.lang-darkmatter::-moz-progress-bar {
+	background: #00FFFF;
+}
+
+progress.lang-darkmatter::-webkit-progress-value {
+	background: #00FFFF;
+}
+
+progress.lang-cpp::-moz-progress-bar {
+	background: #f34b7d;
+}
+
+progress.lang-cpp::-webkit-progress-value {
+	background: #f34b7d;
+}
+
+progress.lang-html::-moz-progress-bar {
+	background: #e44b23;
+}
+
+progress.lang-html::-webkit-progress-value {
+	background: #e44b23;
+}
+
+progress.lang-css::-moz-progress-bar {
+	background: #563d7c;
+}
+
+progress.lang-css::-webkit-progress-value {
+	background: #563d7c;
+}
+
+progress.lang-vue::-moz-progress-bar {
+	background: #2c3e50;
+}
+
+progress.lang-vue::-webkit-progress-value {
+	background: #2c3e50;
+}
+
+progress.lang-js::-moz-progress-bar {
+	background: #f1e05a;
+}
+
+progress.lang-js::-webkit-progress-value {
+	background: #f1e05a;
+}
+
+progress.lang-ts::-moz-progress-bar {
+	background: #2b7489;
+}
+
+progress.lang-ts::-webkit-progress-value {
+	background: #2b7489;
+}
+
+progress.lang-java::-moz-progress-bar {
+	background: #b07219;
+}
+
+progress.lang-java::-webkit-progress-value {
+	background: #b07219;
+}
+
+progress.lang-lua::-moz-progress-bar {
+	background: #000080;
+}
+
+progress.lang-lua::-webkit-progress-value {
+	background: #000080;
+}
+
+progress.lang-perl::-moz-progress-bar {
+	background: #0298c3;
+}
+
+progress.lang-perl::-webkit-progress-value {
+	background: #0298c3;
+}
+
+progress.lang-go::-moz-progress-bar {
+	background: #375eab;
+}
+
+progress.lang-go::-webkit-progress-value {
+	background: #375eab;
+}
+
+progress.lang-ruby::-moz-progress-bar {
+	background: #701516;
+}
+
+progress.lang-ruby::-webkit-progress-value {
+	background: #701516;
+}
+
+progress.lang-php::-moz-progress-bar {
+	background: #4F5D95;
+}
+
+progress.lang-php::-webkit-progress-value {
+	background: #4F5D95;
+}
+
+progress.lang-vb::-moz-progress-bar {
+	background: #945db7;
+}
+
+progress.lang-vb::-webkit-progress-value {
+	background: #945db7;
+}
+
+progress.lang-as::-moz-progress-bar {
+	background: #882B0F;
+}
+
+progress.lang-as::-webkit-progress-value {
+	background: #882B0F;
+}
+
+progress.lang-handlebars::-moz-progress-bar {
+	background: #f7931e;
+}
+
+progress.lang-handlebars::-webkit-progress-value {
+	background: #f7931e;
+}
+
+progress.lang-py::-moz-progress-bar {
+	background: #3572A5;
+}
+
+progress.lang-py::-webkit-progress-value {
+	background: #3572A5;
+}
+
+progress.lang-groovy::-moz-progress-bar {
+	background: #e69f56;
+}
+
+progress.lang-groovy::-webkit-progress-value {
+	background: #e69f56;
+}
+
+progress.lang-kotlin::-moz-progress-bar {
+	background: #F18E33;
+}
+
+progress.lang-kotlin::-webkit-progress-value {
+	background: #F18E33;
+}
+
+progress.lang-scala::-moz-progress-bar {
+	background: #DC322F;
+}
+
+progress.lang-scala::-webkit-progress-value {
+	background: #DC322F;
+}
+
+progress.lang-sql::-moz-progress-bar {
+	background: #dad8d8;
+}
+
+progress.lang-sql::-webkit-progress-value {
+	background: #dad8d8;
+}
+
+progress.lang-cs::-moz-progress-bar {
+	background: #178600;
+}
+
+progress.lang-cs::-webkit-progress-value {
+	background: #178600;
+}
+
+progress.lang-sh::-moz-progress-bar {
+	background: #89e051;
+}
+
+progress.lang-sh::-webkit-progress-value {
+	background: #89e051;
+}
+
+progress.lang-bat::-moz-progress-bar {
+	background: #C1F12E;
+}
+
+progress.lang-bat::-webkit-progress-value {
+	background: #C1F12E;
+}
+
+progress.lang-makefile::-moz-progress-bar {
+	background: #427819;
+}
+
+progress.lang-makefile::-webkit-progress-value {
+	background: #427819;
+}
+
+progress.lang-dockerfile::-moz-progress-bar {
+	background: #384d54;
+}
+
+progress.lang-dockerfile::-webkit-progress-value {
+	background: #384d54;
+}
+

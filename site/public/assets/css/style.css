@@ -1,0 +1,369 @@
+/*
+Darkmatter Master CSS
+*/
+
+@font-face {
+	font-family: "Open Sans";
+	src: url("/assets/css/fonts/opensans.eot");
+	src: url("/assets/css/fonts/opensans.eot") format('embedded-opentype'),
+		url("/assets/css/fonts/opensans.woff2") format('woff2'),
+		url("/assets/css/fonts/opensans.woff") format('woff'),
+		url("/assets/css/fonts/opensans.ttf") format('truetype');
+}
+
+:root {
+	--white: #FFFFFF;
+	--black: #000000;
+	--gray: #111111;
+	--cyan: #00ffff;
+	--dark-cyan: #054545;
+	--bg-color: #111111;
+	--stars-bg: #091818;
+	--bg-content-color: rgba(255, 255, 255, 0.8);
+}
+
+::selection {
+	background: #054545;
+	background: var(--dark-cyan);
+	color: #FFFFFF;
+	color: var(--white);
+}
+
+.is-spoiler {
+	background: #000000;
+	background: var(--black);
+	color: #000000;
+	color: var(--black);
+	/*border-radius: 30px;*/
+}
+
+.is-white.is-spoiler {
+	background: #FFFFFF;
+	background: var(--white);
+	color: #FFFFFF;
+	color: var(--white);
+	/*border-radius: 30px;*/
+}
+
+.is-spoiler:hover, .is-spoiler:focus, .is-spoiler:active {
+	background: inherit !important;
+	color: inherit !important;
+}
+
+.system-status {
+	color: #696969;
+}
+
+.system-status-green {
+	color: #40FF40;
+}
+
+.system-status-yellow {
+	color: #FFBB35;
+}
+
+.system-status-red {
+	color: #FF5053;
+}
+
+body {
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+	background-color: #111111;
+	background-color: var(--bg-color);
+	background: linear-gradient(#111111 0%, #000000 90%);
+	background: linear-gradient(var(--bg-color) 0%, #000000 90%);
+}
+
+#main-container {
+	min-height: 100vh;
+	position: relative;
+	color: #DDDDDD;
+	color: var(--white);
+	font-family: "Open Sans", Calibri, Tahoma, sans-serif;
+}
+
+#main-body {
+	min-height: 100vh;
+	position: relative;
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+	margin-bottom: 0;
+	z-index: 3;
+}
+
+p {
+	color: #DDDDDD;
+	color: var(--white);
+}
+
+code {
+	background-color: #054545;
+	background-color: var(--dark-cyan);
+	color: #00FFFF;
+	color: var(--cyan);
+	padding: 0 4px;
+	border-radius: 4px;
+}
+
+#header-service-status {
+	font-size: 10px;
+	vertical-align: 3px;
+}
+
+.button.is-outlined {
+	background-color: transparent;
+}
+
+.button {
+	transition: all 0.2s ease-in-out;
+}
+
+.button.is-cyan {
+	border-color: #00FFFF;
+	border-color: var(--cyan);
+	background-color: #054545;
+	background-color: var(--dark-cyan);
+	color: #FFFFFF;
+	color: var(--white);
+}
+
+.button.is-cyan.is-focused, .button.is-cyan.is-hovered, .button.is-cyan:focus, .button.is-cyan:hover {
+	background-color: #7856ff;
+	background-color: var(--purple);
+	border-color: #7856ff;
+	border-color: var(--purple);
+	color: #FFFFFF;
+	color: var(--white);
+}
+
+.button.is-cyan.is-outlined {
+	border-color: #7856ff;
+	border-color: var(--purple);
+	color: #7856ff;
+	color: var(--purple);
+	background-color: transparent;
+}
+
+.button.is-cyan.is-outlined.is-focused, .button.is-cyan.is-outlined.is-hovered, .button.is-cyan.is-outlined:focus, .button.is-cyan.is-outlined:hover {
+	background-color: #7856ff;
+	background-color: var(--purple);
+	border-color: #7856ff;
+	border-color: var(--purple);
+	color: #FFFFFF;
+	color: var(--white);
+}
+
+.navbar {
+	border-bottom: 1px solid #00FFFF;
+	border-bottom: 1px solid var(--cyan);
+	box-shadow: #00FFFF 0px 0px 12px;
+	box-shadow: var(--cyan) 0px 0px 12px;
+}
+
+.navbar.is-black {
+	background-color: #111111;
+	background-color: var(--gray);
+}
+
+.navbar a {
+	text-decoration: none;
+}
+
+.navbar a:hover {
+	text-decoration: none;
+}
+
+.navbar.is-black .button {
+	background-color: transparent;
+}
+
+.navbar.is-black .navbar-brand a.navbar-item:hover {
+	background-color: transparent;
+}
+
+.navbar.is-black .navbar-start a.navbar-item:hover {
+	background: #7856ff;
+	background: var(--purple);
+	color: #FFFFFF;
+	color: var(--white);
+}
+
+.navbar.is-black .navbar-end a.navbar-item:hover {
+	background: #7856ff;
+	background: var(--purple);
+	color: #FFFFFF;
+	color: var(--white);
+}
+
+.navbar a.navbar-item {
+	padding-left: 20px;
+	padding-right: 20px;
+	font-size: 20px;
+}
+
+.navbar p.navbar-item {
+	padding-left: 20px;
+	padding-right: 20px;
+	font-size: 20px;
+}
+
+.navbar.is-black .navbar-item {
+	color: #FFFFFF;
+	color: var(--white);
+	background: #111111;
+	background: var(--gray);
+}
+
+.navbar.is-black .navbar-dropdown {
+	background-color: #111111;
+	background-color: var(--gray);
+	color: #FFFFFF;
+	color: var(--white);
+	border-top: none;
+}
+
+
+.content table.is-white th {
+	color: #DDDDDD;
+	color: var(--cream);
+}
+
+.showyourterms::before, .showyourterms::after {
+	box-sizing: content-box;
+}
+
+.showyourterms::after {
+	box-shadow: 16.5px 0 0 0 #F7BF33,32.9px 0 0 0 #69CA42;
+}
+
+.showyourterms .purple {
+	color: var(--purple);
+}
+
+.showyourterms .pink {
+	color: #FF00DD;
+}
+
+.showyourterms .aqua {
+	color: #00FFFF;
+}
+
+.footer {
+	background-color: #000000;
+	background-color: var(--black);
+}
+
+#main-footer {
+	position: absolute;
+	width: 100%;
+	font-size: 14px;
+	color: #FFFFFF;
+	color: var(--white);
+	padding: 0px;
+}
+
+#main-footer .title {
+	color: #FFFFFF;
+	color: var(--white);
+}
+
+#main-footer .subtitle {
+	color: #FFFFFF;
+	color: var(--white);
+}
+
+#main-footer a {
+	color: #FFFFFF;
+	color: var(--white);
+}
+
+#main-footer a:hover {
+	text-decoration: none;
+	color: #7856ff;
+	color: var(--purple);
+}
+
+#footer-server-info {
+	font-size: 10px;
+}
+
+#footer-server-info .is-spoiler {
+	color: #444444;
+	background-color: #444444;
+}
+
+
+
+
+
+
+
+
+
+
+
+.title.is-white, .subtitle.is-white {
+	color: #FFFFFF;
+	color: var(--white);
+}
+
+.title.is-dark, .subtitle.is-dark {
+	color: #000000;
+	color: var(--black);
+}
+
+.is-warn {
+	background-color: rgba(255, 230, 128, 0.5);
+	padding: 6px;
+	border: 1px solid #FFAA4C;
+	border-radius: 4px;
+}
+
+.is-error {
+	background-color: rgba(255, 128, 128, 0.5);
+	padding: 6px;
+	border: 1px solid #FF4C4C;
+	border-radius: 4px;
+}
+
+/* Link Transition Effect, Not hovering */
+a {
+	color: #7856ff;
+	color: var(--purple);
+	font-weight: normal;
+	font-style: none;
+}
+
+/* Link Transition Effect, While hovering */
+a:hover {
+	color: #7856ff;
+	color: var(--purple);
+	font-weight: normal;
+	/*text-decoration: underline;*/
+}
+
+a.button {
+	text-decoration: none;
+}
+
+.no-select {
+	user-select: none;
+	-o-user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+}
+
+.select-all {
+	user-select: all;
+	-o-user-select: all;
+	-moz-user-select: all;
+	-webkit-user-select: all;
+}
+
+.unimportant {
+	color: #888888;
+	font-size: 12px;
+}

@@ -1,0 +1,72 @@
+##
+# Darkmatter Site & Services
+##
+
+map $http_upgrade $connection_upgrade {
+        default upgrade;
+        '' close;
+}
+
+##
+# HTTP Listener
+##
+server {
+	listen      80;
+	server_name darkmatter.local;
+	access_log  off;
+	error_log   off;
+	return      301 https://$server_name$request_uri;
+}
+
+##
+# HTTPS Listener
+##
+server {
+	listen              443 ssl;
+	server_name         darkmatter.local;
+	ssl_session_timeout 5m;
+	ssl_certificate     /etc/nginx/certs/darkmatter.local.crt;
+	ssl_certificate_key /etc/nginx/certs/darkmatter.local.key;
+	ssl_protocols       TLSv1 TLSv1.1 TLSv1.2;
+	access_log          /proc/self/fd/1;
+	error_log           /proc/self/fd/1;
+	root                /mnt/public;
+	index               index.html index.php;
+	error_page          403 /e403.html;
+	error_page          404 /e404.html;
+	error_page          500 /e500.html;
+
+	# Main Site
+	location / {
+		try_files $uri $uri/ /index.php?/$request_uri;
+
+		location = /index.php {
+			fastcgi_index index.php;
+			fastcgi_send_timeout 300s;
+			fastcgi_read_timeout 300s;
+			fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+			fastcgi_param CI_ENV "production";
+			fastcgi_pass 127.0.0.1:9000;
+
+			include fastcgi_params;
+		}
+	}
+
+	# Websocket
+	location /mp {
+		add_header             WSCID "$connection";
+		proxy_intercept_errors on;
+		proxy_http_version     1.1;
+		proxy_set_header       Upgrade $http_upgrade;
+		proxy_set_header       Connection $connection_upgrade;
+		proxy_set_header       X-Real-IP $remote_addr;
+		proxy_set_header       X-Forwarded-For $proxy_add_x_forwarded_for;
+		proxy_connect_timeout  5s;
+		proxy_read_timeout     10s;
+		proxy_send_timeout     10s;
+		set                    $target "http://darkmatter-constellation:8080";
+		proxy_pass             $target;
+	}
+	
+}
+
