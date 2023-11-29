@@ -96,7 +96,7 @@
 									Does <b>not</b> require a bloated and platform-exclusive .NET CLR to function.
 								</li>
 								<li>
-									Is <b>not</b> bias toward any platform or architecture.
+									Is <b>not</b> biased toward any platform or architecture.
 								</li>
 								<li>
 									Is happy to support your platform or achitecture, the more the merrier.
@@ -114,7 +114,7 @@
 						<p>
 							Unlike other languages like Java, Kotlin, C# or any interpreted langauge like Python,
 							Darkmatter is focused on being a fast, efficient, and effective core-language.
-							Effectivly fast enough to replace your C# and C++ projects.
+							Effectively fast enough to replace your C# and C++ projects.
 						</p>
 
 						<br>
